@@ -1,13 +1,15 @@
 import { Outlet } from "react-router-dom";
-import LeftSidebar from "../components/LeftSidebar";
+import LeftSidebar from "../components/LeftSidebar/LeftSidebar";
 
 const PagesLayout = () => {
-  return <div className="w-full md:flex">
-    <LeftSidebar />
-    <section className="flex flex-1 h-full">
-    <Outlet />
-    </section>
-  </div>;
+  return (
+    <div className="w-full">
+      <LeftSidebar />
+      <section className="h-full">
+        <Outlet />
+      </section>
+    </div>
+  );
 };
 
 export default PagesLayout;
