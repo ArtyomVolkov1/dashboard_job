@@ -1,27 +1,51 @@
 import { useAppSelector } from "../../hooks/hooks";
-import HomeCard from './HomeCard';
+import HomeCard from "./HomeCard";
+import IconBox from "../../../public/assets/icons/HomeCard/archive-box.svg";
+import IconHeart from "../../../public/assets/icons/HomeCard/heart.svg";
+import IconRocket from "../../../public/assets/icons/HomeCard/rocket-launch.svg";
+import IconStat from "../../../public/assets/icons/HomeCard/chart-bar.svg";
 
 const HomeCards = () => {
   const tasks = useAppSelector((state) => state.persistedReducer.task.tasks);
   const completedTask = tasks.filter((task) => task.completed === true);
-  console.log('Все',tasks)
+  console.log("Все", tasks);
   return (
     <>
-    <HomeCard title='Количество задач' count={tasks.length} />
-    <HomeCard title='Выполненных' count={completedTask.length} />
-    <HomeCard title='Статистика за день' description='Выполненно:' count={2} />
+      <HomeCard
+        title="Количество задач"
+        count={tasks.length}
+        icon={IconBox}
+        color={"from-blue-600 to-blue-400 shadow-blue-500/40"}
+      />
+      <HomeCard
+        title="Выполненных"
+        count={completedTask.length}
+        icon={IconRocket}
+        color={"from-pink-600 to-pink-400  shadow-pink-500/40"}
+      />
+      <HomeCard
+        title="Статистика за день"
+        description="Выполненно:"
+        count={2}
+        icon={IconStat}
+        color={"from-green-600 to-green-400  shadow-green-500/40"}
+      />
+      <HomeCard
+        title="Любимый репозиторий"
+        count={2}
+        icon={IconHeart}
+        color={"from-red-500 to-red-400 shadow-red-500/40"}
+      />
     </>
   );
 };
 
 export default HomeCards;
 
-
-
-
 // Это карточки для дашборда. Использовать их!
 
-{/* <div class="min-h-screen bg-gray-50/50">
+{
+  /* <div class="min-h-screen bg-gray-50/50">
   <div class="p-4 xl:ml-80">
     <div class="mt-12">
       <div class="mb-12 grid gap-x-6 gap-y-10 md:grid-cols-2 xl:grid-cols-4">
@@ -73,4 +97,5 @@ export default HomeCards;
       </div>
     </div>
   </div>
-</div> */}
+</div> */
+}
