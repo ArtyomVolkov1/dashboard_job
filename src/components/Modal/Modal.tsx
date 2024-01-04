@@ -332,14 +332,62 @@ const EditTask = ({ handleClose }: HandleClose) => {
   );
 };
 
-// type Mapping = {
-//   addingTask: ({handleClose}:HandleClose) => JSX.Element;
-// }
+// Стилизовать карточку показа задачи
+
+const ViewTask = ({ handleClose }: HandleClose) => {
+  const taskId = useAppSelector((state) => state.modal.taskId);
+  const task = useAppSelector(getTaskById(taskId));
+  const titleTask = task?.task.title;
+  const descriptionTask = task?.task.description;
+  const selectOption = task?.task.selectOptions;
+  console.log(titleTask, descriptionTask, selectOption);
+  return (
+    <div className="rounded-xl border border-indigo-500 bg-white p-4 shadow-lg md:w-1/2 lg:w-[500px] ">
+      <div className="flex items-center gap-3 lg:justify-center">
+        <span className="shrink-0 rounded-full bg-blue-400 p-2 text-white">
+          <svg
+            className="h-4 w-4"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clipRule="evenodd"
+              d="M18 3a1 1 0 00-1.447-.894L8.763 6H5a3 3 0 000 6h.28l1.771 5.316A1 1 0 008 18h1a1 1 0 001-1v-4.382l6.553 3.276A1 1 0 0018 15V3z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </span>
+        <p className="font-medium sm:text-lg">Описание задачи</p>
+      </div>
+      <div className="flex flex-col">
+        <div className="" >
+          <h3>Задача: {titleTask}</h3>
+        </div>
+        <div className="">
+          <p>Репозиторий: {selectOption}</p>
+        </div>
+        <div className="">
+          <p>Описание задачи: {descriptionTask}</p>
+        </div>
+      </div>
+      <div className="mt-6 sm:flex sm:gap-5 lg:justify-start">
+        <button
+          onClick={handleClose}
+          className="mt-2 inline-block w-full rounded-lg bg-red-500 hover:bg-red-700 px-5 py-3 text-center text-sm font-semibold text-white sm:mt-0 sm:w-auto"
+        >
+          Понятно
+        </button>
+      </div>
+    </div>
+  );
+};
 
 const mapping = {
   addingTask: AddTaskForm,
   delitingTask: DeleteTask,
   renamingTask: EditTask,
+  lookingTask: ViewTask,
 };
 
 const Modal = () => {
