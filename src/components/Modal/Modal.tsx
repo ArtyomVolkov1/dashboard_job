@@ -340,7 +340,6 @@ const ViewTask = ({ handleClose }: HandleClose) => {
   const titleTask = task?.task.title;
   const descriptionTask = task?.task.description;
   const selectOption = task?.task.selectOptions;
-  console.log(titleTask, descriptionTask, selectOption);
   return (
     <div className="rounded-xl border border-indigo-500 bg-white p-4 shadow-lg md:w-1/2 lg:w-[500px] ">
       <div className="flex items-center gap-3 lg:justify-center">
@@ -360,21 +359,24 @@ const ViewTask = ({ handleClose }: HandleClose) => {
         </span>
         <p className="font-medium sm:text-lg">Описание задачи</p>
       </div>
-      <div className="flex flex-col">
-        <div className="" >
-          <h3>Задача: {titleTask}</h3>
+      <div className="flex flex-col mt-3">
+        <div className="flex gap-2">
+          <span className="text-gray-700 font-semibold">Репозиторий:</span>
+          <span>{selectOption}</span>
         </div>
-        <div className="">
-          <p>Репозиторий: {selectOption}</p>
+        <div className="flex gap-2">
+          <span className="text-gray-700 font-semibold" >Задача:</span>
+          <span>{titleTask}</span>
         </div>
-        <div className="">
-          <p>Описание задачи: {descriptionTask}</p>
+        <div className="flex flex-wrap gap-1">
+          <span className="text-gray-700 font-semibold">Описание задачи:</span>
+          <p>{descriptionTask}</p>
         </div>
       </div>
       <div className="mt-6 sm:flex sm:gap-5 lg:justify-start">
         <button
           onClick={handleClose}
-          className="mt-2 inline-block w-full rounded-lg bg-red-500 hover:bg-red-700 px-5 py-3 text-center text-sm font-semibold text-white sm:mt-0 sm:w-auto"
+          className="mt-2 inline-block w-full rounded-lg bg-indigo-600 hover:bg-indigo-700 px-5 py-3 text-center text-sm font-semibold text-white sm:mt-0 sm:w-auto"
         >
           Понятно
         </button>
