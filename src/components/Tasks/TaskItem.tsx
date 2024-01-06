@@ -31,10 +31,14 @@ const TaskItem = ({
   const handleViewTask = (taskId: string) => {
     dispatch(openModal({ type: "lookingTask", taskId: taskId }));
   };
-  
+
   return (
     <div className="flex flex-wrap place-items-center">
-      <div className={`relative w-72 overflow-hidden rounded-xl  ${completed && "border-2 border-green-400"} bg-white p-4 shadow-lg md:w-96`}>
+      <div
+        className={`relative w-full overflow-hidden rounded-xl  ${
+          completed && "border-2 border-green-400"
+        } bg-white p-4 shadow-lg md:w-96`}
+      >
         <div className="mb-2 flex items-center gap-2 border-b-2 py-2">
           <div className="font-medium">Репозиторий:</div>
           <div className="text-base text-gray-600">{selectOptions}</div>
@@ -50,7 +54,7 @@ const TaskItem = ({
           <div className="flex items-center gap-2">
             <label
               htmlFor="green-checkbox"
-              className="text-sm font-medium text-gray-900 dark:text-gray-400"
+              className="text-sm font-medium text-gray-900"
             >
               Завершить
             </label>
@@ -63,6 +67,23 @@ const TaskItem = ({
             />
           </div>
           <div className="flex gap-5">
+          <button onClick={() => handleViewTask(id)}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 21L15.8033 15.8033M15.8033 15.8033C17.1605 14.4461 18 12.5711 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18C12.5711 18 14.4461 17.1605 15.8033 15.8033ZM10.5 7.5V13.5M13.5 10.5H7.5"
+                  stroke="#0F172A"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
             <button onClick={() => handleEditTask(id)}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +118,6 @@ const TaskItem = ({
                 />
               </svg>
             </button>
-            <button onClick={() => handleViewTask(id)}>Пос</button>
           </div>
         </div>
       </div>
