@@ -7,9 +7,8 @@ import IconStat from "../../../public/assets/icons/HomeCard/chart-bar.svg";
 
 const HomeCards = () => {
   const tasks = useAppSelector((state) => state.persistedReducer.task.tasks);
-  console.log(tasks)
   const completedTask = tasks.filter((task) => task.completed === true);
-  const favouriteRepos = tasks.map((task) => task.task.selectOptions); // исправить ошибки линтера
+  const favouriteRepos = tasks.map((task) => task.task.selectOptions);
   const allCountRepo: Record<string, number> = favouriteRepos.reduce(
     (acc, it) => {
       acc[it!] = (acc[it!] || 0) + 1;

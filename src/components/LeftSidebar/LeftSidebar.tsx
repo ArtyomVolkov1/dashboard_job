@@ -3,8 +3,6 @@ import { sidebarLinks } from "../../constants";
 import { INavLink } from "../../types";
 import { useState } from "react";
 
-// Изменить цвета, поменять разрешение экрана у lg, md, sm
-
 const LeftSidebar = () => {
   const { pathname } = useLocation();
   const [open, setOpen] = useState(false);

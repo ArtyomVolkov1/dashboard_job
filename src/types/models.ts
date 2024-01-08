@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export interface IUser {
   login: string;
   id: number;
@@ -26,7 +27,7 @@ export interface ServerResponse {
   items: IUser[];
 }
 
-export type Root = Root2[];
+export type Root = Root[];
 
 export interface IOwner {
   login: string;
@@ -115,15 +116,15 @@ export interface IRepo {
   has_pages: boolean;
   has_discussions: boolean;
   forks_count: number;
-  mirror_url: any;
+  mirror_url?: any;
   archived: boolean;
   disabled: boolean;
   open_issues_count: number;
-  license: any;
+  license?: any;
   allow_forking: boolean;
   is_template: boolean;
   web_commit_signoff_required: boolean;
-  topics: any[];
+  topics?: any[];
   visibility: string;
   forks: number;
   open_issues: number;
