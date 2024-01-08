@@ -24,7 +24,7 @@ const Tasks = () => {
       </div>
       <div className="mb-4 grid grid-cols-1 md:grid-cols-custom gap-4">
         {tasks
-          .filter((task) => (taskFilterValue === "all" ? true : task.completed))
+          .filter((task) => (taskFilterValue === "all" ? !task.completed : task.completed))
           .map((task) => (
             <TaskItem
               key={task.id}
