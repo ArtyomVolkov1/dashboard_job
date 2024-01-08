@@ -18,7 +18,7 @@ const Tasks = () => {
   };
   return (
     <>
-      <div className="flex justify-between mb-5">
+      <div className="flex flex-col md:flex-row justify-between gap-5 mb-5">
         <TaskFilter getTaskFilterValue={getTaskFilterValue} />
         <button className="inline-block w-full rounded-lg bg-indigo-600 hover:bg-indigo-700 px-5 py-3 text-center text-sm font-semibold text-white sm:w-auto" onClick={handleAddTask}>Создать задачу</button>
       </div>
