@@ -18,6 +18,7 @@ const TaskFilter = ({getTaskFilterValue}: FilterTaskProps) => {
     >
       <option value="all">Все задачи</option>
       <option value="completed">Выполненные</option>
+      <option value="unCompleted">Не выполненные</option>
     </select>
   );
 };

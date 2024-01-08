@@ -20,11 +20,27 @@ const Tasks = () => {
     <>
       <div className="flex flex-col md:flex-row justify-between gap-5 mb-5">
         <TaskFilter getTaskFilterValue={getTaskFilterValue} />
-        <button className="inline-block w-full rounded-lg bg-indigo-600 hover:bg-indigo-700 px-5 py-3 text-center text-sm font-semibold text-white sm:w-auto" onClick={handleAddTask}>Создать задачу</button>
+        <button
+          className="inline-block w-full rounded-lg bg-indigo-600 hover:bg-indigo-700 px-5 py-3 text-center text-sm font-semibold text-white sm:w-auto"
+          onClick={handleAddTask}
+        >
+          Создать задачу
+        </button>
       </div>
       <div className="mb-4 grid grid-cols-1 md:grid-cols-custom gap-4">
         {tasks
-          .filter((task) => (taskFilterValue === "all" ? !task.completed : task.completed))
+          .filter((task) => {
+            switch (taskFilterValue) {
+              case "all":
+                return task;
+              case "completed":
+                return task.completed;
+              case "unCompleted":
+                return !task.completed;
+              default:
+                return task;
+            }
+          })
           .map((task) => (
             <TaskItem
               key={task.id}
