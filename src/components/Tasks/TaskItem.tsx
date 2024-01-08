@@ -40,7 +40,7 @@ const TaskItem = ({
         } bg-white p-4 shadow-lg md:w-96`}
       >
         <div className="mb-2 flex items-center gap-2 border-b-2 py-2">
-          <div className="font-medium">Репозиторий:</div>
+          <div className="text-lg font-medium">Репозиторий:</div>
           <div className="text-base text-gray-600">{selectOptions}</div>
         </div>
         <div className="w-full">
