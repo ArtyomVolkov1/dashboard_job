@@ -39,7 +39,7 @@ const AddTaskForm = ({ handleClose }: HandleClose) => {
   const initialValues: MyFormValue = {
     title: "",
     description: "",
-    selectOptions: "",
+    selectOptions: "Без репозитория",
   };
   const dispatch = useAppDispatch();
   return (

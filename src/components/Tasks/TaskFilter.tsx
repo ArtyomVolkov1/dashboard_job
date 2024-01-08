@@ -14,7 +14,7 @@ const TaskFilter = ({getTaskFilterValue}: FilterTaskProps) => {
     <select
       onChange={handleFilterTaskChanges}
       value={filterTaskVal}
-      className="mt-1.5 rounded-md bg-slate-100 border-indigo-500 text-gray-700 sm:text-sm"
+      className="mt-1.5 focus:outline-none rounded-md bg-slate-100 border-indigo-500 text-gray-700 sm:text-sm"
     >
       <option value="all">Все задачи</option>
       <option value="completed">Выполненные</option>

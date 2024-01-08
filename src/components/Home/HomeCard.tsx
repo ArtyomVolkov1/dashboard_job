@@ -13,7 +13,7 @@ const HomeCard = ({ title, value, icon, color }: HomeCardProp) => {
     </div>
     <div className="p-4 text-right">
       <p className="text-blue-gray-600 block font-sans text-sm font-normal leading-normal antialiased">{title}</p>
-      <h4 className="text-blue-gray-900 block font-sans text-lg font-semibold leading-snug tracking-normal antialiased">{value}</h4>
+      <h4 className="text-blue-gray-900 block font-sans text-sm xl:text-lg font-semibold leading-snug tracking-normal antialiased">{value}</h4>
     </div>
   </div>
   );

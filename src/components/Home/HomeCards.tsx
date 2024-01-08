@@ -37,13 +37,13 @@ const HomeCards = () => {
       />
       <HomeCard
         title="Статистика за день"
-        value={2}
+        value={completedTask.length}
         icon={IconStat}
         color={"from-green-600 to-green-400  shadow-green-500/40"}
       />
       <HomeCard
         title="Любимый репозиторий"
-        value={favouriteRepoResult[0]}
+        value={favouriteRepoResult[0]} 
         icon={IconHeart}
         color={"from-red-500 to-red-400 shadow-red-500/40"}
       />
