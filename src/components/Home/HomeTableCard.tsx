@@ -67,15 +67,15 @@ const HomeTableCard = () => {
 
                     <td className="py-3 px-5 border-b border-blue-gray-50">
                       <p className="block antialiased font-sans text-xs font-medium text-blue-gray-600">
-                        {task.task.selectOptions ? task.task.selectOptions : "Без репозитория"}
+                        {task.task.selectOptions
+                          ? task.task.selectOptions
+                          : "Без репозитория"}
                       </p>
                     </td>
                     <td className="py-3 px-5 border-b border-blue-gray-50">
                       <div className="w-10/12">
                         <p className="antialiased font-sans mb-1 block text-xs font-medium text-blue-gray-600">
-                          {task.completed
-                            ? "Выполненно"
-                            : "Не выполненно"}
+                          {task.completed ? "Выполненно" : "Не выполненно"}
                         </p>
                       </div>
                     </td>

@@ -6,7 +6,7 @@
 
 @layer base {
   * {
-    @apply box-border list-none p-0 m-0 scroll-smooth ;
+    @apply box-border list-none p-0 m-0 scroll-smooth;
   }
 
   body {
@@ -42,13 +42,23 @@
   .small-regular {
     @apply text-[14px] font-normal leading-[140%];
   }
+
+  
+  /* Container */
+  .section-container {
+    @apply p-4 border-2 border-gray-200 border-dashed rounded-lg;
+  }
+
+
   /* leftsidebar */
   .leftsidebar {
     @apply fixed top-0 left-0 z-40 w-64 h-screen;
   }
+
+
   /* Card Repository */
   .card-repository {
-    @apply  max-w-[28rem] whitespace-normal break-words rounded-lg border bg-white p-4 text-sm font-normal shadow-lg hover:scale-105 focus:outline-none;
+    @apply max-w-[28rem] whitespace-normal break-words rounded-lg border bg-white p-4 text-sm font-normal shadow-lg hover:scale-105 focus:outline-none;
   }
   .card-repository__name {
     @apply text-base font-medium leading-relaxed tracking-normal antialiased transition-colors hover:text-pink-500 cursor-pointer;
@@ -59,6 +69,7 @@
   .group-button {
     @apply flex gap-4;
   }
+
   /* Custom scrollBar */
   .custom-scrollbar::-webkit-scrollbar {
     width: 3px;
@@ -78,4 +89,5 @@
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background: #7878a3;
   }
+
 }

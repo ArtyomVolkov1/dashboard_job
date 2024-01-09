@@ -89,7 +89,3 @@ const LeftSidebar = () => {
 };
 
 export default LeftSidebar;
-
-// className={`leftsidebar-link group ${
-//   isActive && "border-e-4 border-blue-500"
-// } ${!open && 'scale-0'}`}

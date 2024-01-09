@@ -42,7 +42,7 @@ const HomeCards = () => {
       />
       <HomeCard
         title="Любимый репозиторий"
-        value={favouriteRepoResult[0]} 
+        value={favouriteRepoResult[0]}
         icon={IconHeart}
         color={"from-red-500 to-red-400 shadow-red-500/40"}
       />
@@ -51,4 +51,3 @@ const HomeCards = () => {
 };
 
 export default HomeCards;
-

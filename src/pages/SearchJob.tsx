@@ -4,9 +4,9 @@ import SearchRepo from "../components/Search/SearchRepo";
 const SearchJob = () => {
   return (
     <div className="p-3 sm:ml-64">
-      <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg">
+      <div className="section-container">
         <SearchRepo />
-    </div>
+      </div>
     </div>
   );
 };

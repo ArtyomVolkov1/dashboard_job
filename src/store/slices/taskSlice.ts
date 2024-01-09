@@ -37,7 +37,14 @@ export const taskSlice = createSlice({
       state,
       {
         payload: { taskId, title, description, selectOptions },
-      }: { payload: { taskId: string; title?: string; description?: string, selectOptions?:string, } }
+      }: {
+        payload: {
+          taskId: string;
+          title?: string;
+          description?: string;
+          selectOptions?: string;
+        };
+      }
     ) => {
       const currentTask = state.tasks.find(({ id }) => id === taskId);
       if (currentTask) {

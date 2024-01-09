@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 type FilterTaskProps = {
-    getTaskFilterValue: (filterValue: string) => void;
-}
+  getTaskFilterValue: (filterValue: string) => void;
+};
 
-const TaskFilter = ({getTaskFilterValue}: FilterTaskProps) => {
+const TaskFilter = ({ getTaskFilterValue }: FilterTaskProps) => {
   const [filterTaskVal, setFilterTaskVal] = useState("all");
   const handleFilterTaskChanges = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setFilterTaskVal(e.target.value);

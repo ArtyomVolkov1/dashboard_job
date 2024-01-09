@@ -365,7 +365,7 @@ const ViewTask = ({ handleClose }: HandleClose) => {
           <span>{selectOption}</span>
         </div>
         <div className="flex gap-2">
-          <span className="text-gray-700 font-semibold" >Задача:</span>
+          <span className="text-gray-700 font-semibold">Задача:</span>
           <span>{titleTask}</span>
         </div>
         <div className="flex flex-wrap gap-1">

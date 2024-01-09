@@ -1,5 +1,4 @@
 export type INavLink = {
-    route: string;
-    label:string;
+  route: string;
+  label: string;
 };
-

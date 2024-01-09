@@ -2,17 +2,14 @@ import React from "react";
 import { IRepo } from "../../types/models";
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import { addRepos, deleteRepos } from "../../store/slices/githubSlice";
-// import { getRepoById } from "../../selectors";
-
-// Добавить popup на ошибку что этот репозиторий уже добавлен. Ошибку выводить error.
 
 const RepoCard = ({ repo }: { repo: IRepo }) => {
   const colorLang =
     repo.language === "JavaScript" ? "bg-yellow-500" : "bg-blue-500";
   const dispatch = useAppDispatch();
   const repos = useAppSelector((state) => state.persistedReducer.github.repos);
-  const correctDate = repo.updated_at.split('T')[0];
-  const isAddedRepo = repos.find(({id}) => id === repo.id);
+  const correctDate = repo.updated_at.split("T")[0];
+  const isAddedRepo = repos.find(({ id }) => id === repo.id);
   const addToNameRepos = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     dispatch(
@@ -25,11 +22,13 @@ const RepoCard = ({ repo }: { repo: IRepo }) => {
   };
   const deleteRepo = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    dispatch(deleteRepos({
-      id: repo.id,
-      key: repo.full_name
-    }));
-  }
+    dispatch(
+      deleteRepos({
+        id: repo.id,
+        key: repo.full_name,
+      })
+    );
+  };
   return (
     <div className="card-repository">
       <div className="flex justify-end mb-2">
@@ -48,9 +47,13 @@ const RepoCard = ({ repo }: { repo: IRepo }) => {
       <div className="mt-4">
         <button
           onClick={isAddedRepo ? deleteRepo : addToNameRepos}
-          className={`inline-flex items-center justify-center rounded-lg ${isAddedRepo ? "bg-yellow-500" : "bg-blue-500"} px-3 py-2 text-center text-sm font-medium text-white ${isAddedRepo ? "hover:bg-yellow-600" : "hover:bg-blue-700"} active:scale-x-105`}
+          className={`inline-flex items-center justify-center rounded-lg ${
+            isAddedRepo ? "bg-yellow-500" : "bg-blue-500"
+          } px-3 py-2 text-center text-sm font-medium text-white ${
+            isAddedRepo ? "hover:bg-yellow-600" : "hover:bg-blue-700"
+          } active:scale-x-105`}
         >
-          {isAddedRepo ? "Добавлен" :"Добавить в работу"}
+          {isAddedRepo ? "Добавлен" : "Добавить в работу"}
         </button>
       </div>
       <div className="mt-4 flex items-center gap-3">
