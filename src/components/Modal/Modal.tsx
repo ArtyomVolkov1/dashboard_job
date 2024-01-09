@@ -43,7 +43,7 @@ const AddTaskForm = ({ handleClose }: HandleClose) => {
   };
   const dispatch = useAppDispatch();
   return (
-    <div className="rounded-xl border border-indigo-500 bg-white p-4 shadow-lg md:w-1/2 lg:w-[500px] ">
+    <div className="rounded-xl border border-indigo-500 bg-white p-4 shadow-lg w-96 md:w-1/2 lg:w-[500px] ">
       <div className="flex items-center gap-4 lg:justify-center">
         <span className="shrink-0 rounded-full bg-blue-400 p-2 text-white">
           <svg
@@ -169,7 +169,7 @@ const DeleteTask = ({ handleClose }: HandleClose) => {
     dispatch(closeModal());
   };
   return (
-    <div className="rounded-xl border border-indigo-500 bg-white p-4 shadow-lg md:w-1/2 lg:w-[500px] ">
+    <div className="rounded-xl border border-indigo-500 bg-white p-4 shadow-lg w-96 md:w-1/2 lg:w-[500px] ">
       <div className="flex flex-col justify-center items-center gap-2 md:flex-row  lg:justify-center">
         <span className="shrink-0 rounded-full bg-blue-400 p-2 text-white">
           <svg
@@ -223,7 +223,7 @@ const EditTask = ({ handleClose }: HandleClose) => {
   };
   const dispatch = useAppDispatch();
   return (
-    <div className="rounded-xl border border-indigo-500 bg-white p-4 shadow-lg md:w-1/2 lg:w-[500px] ">
+    <div className="rounded-xl border border-indigo-500 bg-white p-4 shadow-lg w-96 md:w-1/2 lg:w-[500px] ">
       <div className="flex items-center gap-4 lg:justify-center">
         <span className="shrink-0 rounded-full bg-blue-400 p-2 text-white">
           <svg
@@ -341,7 +341,7 @@ const ViewTask = ({ handleClose }: HandleClose) => {
   const descriptionTask = task?.task.description;
   const selectOption = task?.task.selectOptions;
   return (
-    <div className="rounded-xl border border-indigo-500 bg-white p-4 shadow-lg md:w-1/2 lg:w-[500px] ">
+    <div className="rounded-xl border border-indigo-500 bg-white p-4 shadow-lg w-96 md:w-1/2 lg:w-[500px] ">
       <div className="flex items-center gap-3 lg:justify-center">
         <span className="shrink-0 rounded-full bg-blue-400 p-2 text-white">
           <svg
