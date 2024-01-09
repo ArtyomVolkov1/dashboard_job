@@ -32,7 +32,7 @@ const HomeTableCard = () => {
             </p>
           </div>
         </div>
-        <div className="p-6 overflow-y-scroll h-96 xl:h-auto px-0 pt-0 pb-2">
+        <div className="custom-scrollbar p-6 overflow-y-scroll h-96 xl:h-auto px-0 pt-0 pb-2">
           <table className="w-full min-w-[640px] table-auto">
             <thead>
               <tr>
