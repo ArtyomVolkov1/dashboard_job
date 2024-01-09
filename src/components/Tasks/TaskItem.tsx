@@ -44,7 +44,7 @@ const TaskItem = ({
           <div className="text-base text-gray-600">{selectOptions}</div>
         </div>
         <div className="w-full">
-          <div className="mb-2 gap-1">
+          <div className="mb-2 flex items-center gap-2">
             <span className="base-medium">Задача:</span>
             <span className="text-base text-gray-600">{title}</span>
           </div>
