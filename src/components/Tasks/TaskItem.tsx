@@ -40,21 +40,24 @@ const TaskItem = ({
         } bg-white p-4 shadow-lg md:w-96`}
       >
         <div className="mb-2 flex items-center gap-2 border-b-2 py-2">
-          <div className="text-lg font-medium">Репозиторий:</div>
+          <div className="base-medium">Репозиторий:</div>
           <div className="text-base text-gray-600">{selectOptions}</div>
         </div>
         <div className="w-full">
-          <div className="mb-2 text-lg gap-1 font-medium">
-            Задача: <span className="text-base text-gray-600">{title}</span>
+          <div className="mb-2 gap-1">
+            <span className="base-medium">Задача:</span>
+            <span className="text-base text-gray-600">{title}</span>
           </div>
-          <p className="mb-2 text-lg font-medium">Что нужно сделать:</p>
-          <p className="mb-4 text-sm text-gray-400 truncate">{description}</p>
+          <p className="mb-2 base-medium">Что нужно сделать:</p>
+          <p className="mb-4 small-regular text-gray-400 truncate">
+            {description}
+          </p>
         </div>
         <div className="mt-3 flex justify-between">
           <div className="flex items-center gap-2">
             <label
               htmlFor="green-checkbox"
-              className="text-sm font-medium text-gray-900"
+              className="small-regular text-gray-900"
             >
               Завершить
             </label>
@@ -67,7 +70,7 @@ const TaskItem = ({
             />
           </div>
           <div className="flex gap-5">
-          <button onClick={() => handleViewTask(id)}>
+            <button onClick={() => handleViewTask(id)}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"

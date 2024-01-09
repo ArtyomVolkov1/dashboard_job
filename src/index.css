@@ -15,13 +15,37 @@
 }
 
 @layer utilities {
+  /* Typography */
+  .h3-bold {
+    @apply text-[24px] font-bold leading-[140%] tracking-tighter;
+  }
+  .base-medium {
+    @apply text-[16px] font-medium leading-[140%];
+  }
+
+  .base-regular {
+    @apply text-[16px] font-normal leading-[140%];
+  }
+
+  .body-bold {
+    @apply text-[18px] font-bold leading-[140%];
+  }
+
+  .body-medium {
+    @apply text-[18px] font-medium leading-[140%];
+  }
+
+  .small-medium {
+    @apply text-[14px] font-medium leading-[140%];
+  }
+
+  .small-regular {
+    @apply text-[14px] font-normal leading-[140%];
+  }
   /* leftsidebar */
   .leftsidebar {
     @apply fixed top-0 left-0 z-40 w-64 h-screen;
   }
-
-  /* Card Task */
-
   /* Card Repository */
   .card-repository {
     @apply  max-w-[28rem] whitespace-normal break-words rounded-lg border bg-white p-4 text-sm font-normal shadow-lg hover:scale-105 focus:outline-none;
@@ -35,6 +59,7 @@
   .group-button {
     @apply flex gap-4;
   }
+  /* Custom scrollBar */
   .custom-scrollbar::-webkit-scrollbar {
     width: 3px;
     height: 3px;

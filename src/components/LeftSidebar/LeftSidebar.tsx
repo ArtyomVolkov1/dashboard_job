@@ -55,7 +55,7 @@ const LeftSidebar = () => {
             <span className="sr-only">Close menu</span>
           </button>
           <Link to={"/"} className="flex items-center ps-2.5 mb-5">
-            <span className="self-center text-xl font-semibold whitespace-nowrap hover:text-blue-500 ">
+            <span className="self-center h3-bold font-semibold whitespace-nowrap hover:text-blue-500 ">
               Dashboard
             </span>
           </Link>
@@ -65,7 +65,7 @@ const LeftSidebar = () => {
               return (
                 <li
                   key={link.label}
-                  className={`p-1 text-gray-900 rounded-lg transition-all ${
+                  className={`p-1 base-regular text-gray-900 rounded-lg transition-all ${
                     isActive && "bg-gray-100"
                   } hover:bg-gray-100  group`}
                 >
