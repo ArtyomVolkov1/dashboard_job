@@ -25,7 +25,6 @@ const SearchRepo = () => {
   useEffect(() => {
     setDropdownVisibily(debounced.length > 3 && users?.length! > 0);
   }, [debounced, users]);
-
   return (
     <>
       <div className="flex justify-center">
@@ -77,7 +76,7 @@ const SearchRepo = () => {
           </div>
         </div>
       </div>
-      <div className=" mt-10 mb-4 grid grid-cols-1 md:grid-cols-custom gap-4">
+      <div className=" mt-10 mb-4 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-custom gap-4">
         {/* Карточки */}
         {isRepoLoading && <Skeleton />}
         {repos?.map((repo) => (
