@@ -27,7 +27,7 @@ const Tasks = () => {
           Создать задачу
         </button>
       </div>
-      <div className="mb-4 grid grid-cols-1 md:grid-cols-custom gap-4">
+      <div className="mb-4 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-custom gap-4">
         {tasks
           .filter((task) => {
             switch (taskFilterValue) {
