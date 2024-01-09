@@ -11,6 +11,7 @@ const RepoCard = ({ repo }: { repo: IRepo }) => {
     repo.language === "JavaScript" ? "bg-yellow-500" : "bg-blue-500";
   const dispatch = useAppDispatch();
   const repos = useAppSelector((state) => state.persistedReducer.github.repos);
+  const correctDate = repo.updated_at.split('T')[0];
   const isAddedRepo = repos.find(({id}) => id === repo.id);
   const addToNameRepos = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -92,7 +93,7 @@ const RepoCard = ({ repo }: { repo: IRepo }) => {
             ></path>
           </svg>
           <p className="block font-sans text-xs font-normal text-gray-700 antialiased">
-            Data
+            {correctDate}
           </p>
         </div>
       </div>
