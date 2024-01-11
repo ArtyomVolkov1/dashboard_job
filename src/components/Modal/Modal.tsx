@@ -4,7 +4,7 @@ import { Formik, Form, Field } from "formik";
 import * as yup from "yup";
 import { closeModal } from "../../store/slices/modalSlice";
 import { addTask, deleteTask, editTask } from "../../store/slices/taskSlice";
-import { getTaskById } from "../../selectors";
+import { getTaskById } from "../../store/selectors";
 
 // Решить проблему с типами
 

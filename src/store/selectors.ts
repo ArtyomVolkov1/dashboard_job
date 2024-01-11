@@ -1,4 +1,9 @@
-import { RootState } from "./store/store";
+import { RootState } from "./store";
+
+export const getTasks = (state: RootState) => state.persistedReducer.task.tasks;
+
+export const getRepos = (state: RootState) =>
+  state.persistedReducer.github.repos;
 
 export const getTaskById = (taskId: string) => (state: RootState) => {
   const tasks = state.persistedReducer.task.tasks;

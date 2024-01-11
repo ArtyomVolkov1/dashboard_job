@@ -4,9 +4,10 @@ import IconBox from "../../../public/assets/icons/HomeCard/archive-box.svg";
 import IconHeart from "../../../public/assets/icons/HomeCard/heart.svg";
 import IconRocket from "../../../public/assets/icons/HomeCard/rocket-launch.svg";
 import IconStat from "../../../public/assets/icons/HomeCard/chart-bar.svg";
+import { getTasks } from "../../store/selectors";
 
 const HomeCards = () => {
-  const tasks = useAppSelector((state) => state.persistedReducer.task.tasks);
+  const tasks = useAppSelector(getTasks);
   const completedTask = tasks.filter((task) => task.completed === true);
   const favouriteRepos = tasks.map((task) => task.task.selectOptions);
   const allCountRepo: Record<string, number> = favouriteRepos.reduce(

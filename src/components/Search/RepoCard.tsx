@@ -2,12 +2,13 @@ import React from "react";
 import { IRepo } from "../../types/models";
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import { addRepos, deleteRepos } from "../../store/slices/githubSlice";
+import { getRepos } from "../../store/selectors";
 
 const RepoCard = ({ repo }: { repo: IRepo }) => {
   const colorLang =
     repo.language === "JavaScript" ? "bg-yellow-500" : "bg-blue-500";
   const dispatch = useAppDispatch();
-  const repos = useAppSelector((state) => state.persistedReducer.github.repos);
+  const repos = useAppSelector(getRepos);
   const correctDate = repo.updated_at.split("T")[0];
   const isAddedRepo = repos.find(({ id }) => id === repo.id);
   const addToNameRepos = (e: React.MouseEvent<HTMLButtonElement>) => {

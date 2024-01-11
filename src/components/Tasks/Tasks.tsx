@@ -4,11 +4,12 @@ import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import Modal from "../Modal/Modal";
 import TaskFilter from "./TaskFilter";
 import { openModal } from "../../store/slices/modalSlice";
+import { getTasks } from "../../store/selectors";
 
 const Tasks = () => {
   const [taskFilterValue, setTaskFilterValue] = useState("all");
   const dispatch = useAppDispatch();
-  const tasks = useAppSelector((state) => state.persistedReducer.task.tasks);
+  const tasks = useAppSelector(getTasks);
   const isOpened = useAppSelector((state) => state.modal.isOpened);
   const handleAddTask = () => {
     dispatch(openModal({ type: "addingTask" }));
