@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-non-null-asserted-optional-chain */
 import SearchRepo from "../components/Search/SearchRepo";
 
 const SearchJob = () => {
