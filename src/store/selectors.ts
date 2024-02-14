@@ -3,6 +3,10 @@ import { RootState } from "./store";
 
 export const getTasks = (state: RootState) => state.persistedReducer.task.tasks;
 
+export const getCompletedTasks = createSelector(getTasks, (tasks) =>
+  tasks.filter((task) => task.completed === true)
+);
+
 export const getModalState = (state: RootState) => state.modal.isOpened;
 
 export const getRepos = (state: RootState) =>
@@ -17,5 +21,3 @@ export const getRepoById = (currentId: number) => (state: RootState) => {
   const repos = state.persistedReducer.github.repos;
   return repos.find((repo) => repo.id === currentId);
 };
-
-export const getCompletedTasks = createSelector(getTasks, (tasks) => tasks.filter((task) => task.completed === true));
